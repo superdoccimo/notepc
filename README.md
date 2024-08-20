@@ -19,11 +19,11 @@
 
 1. リポジトリをクローンします。
     ```bash
-    git clone https://github.com/yourusername/laptop-dhcp-pxe-server.git
+    git clone https://github.com/superdoccimo/notepc.git
     ```
 2. ディレクトリに移動します。
     ```bash
-    cd laptop-dhcp-pxe-server
+    cd notepc
     ```
 3. Docker Composeを使用して、コンテナを起動します。
     ```bash
