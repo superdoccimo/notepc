@@ -1,0 +1,35 @@
+COPYversion: "2"
+
+services:
+  docker-dhcpd:
+    image: wastrachan/dhcpd
+    container_name: docker-dhcpd
+    environment:
+      - PUID=1111
+      - PGID=1112
+    volumes:
+      - /home/mamu/netboot/dhcpconfig:/config
+    network_mode: "host"  # ホストネットワークモードを使用
+    restart: unless-stopped
+
+  netbootxyz:
+    image: ghcr.io/netbootxyz/netbootxyz
+    container_name: netbootxyz
+    environment:
+      - MENU_VERSION=2.0.47
+      - NGINX_PORT=80
+      - WEB_APP_PORT=3000
+    volumes:
+      - /home/mamu/netboot/config:/config
+      - /home/mamu/netboot/assets:/assets
+    networks:
+      - my_custom_network
+    ports:
+      - 3000:3000
+      - 69:69/udp
+      - 8080:80
+    restart: unless-stopped
+
+networks:
+  my_custom_network:
+    external: true
