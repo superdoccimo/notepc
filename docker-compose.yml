@@ -1,4 +1,4 @@
-COPYversion: "2"
+version: "2"
 
 services:
   docker-dhcpd:
@@ -8,8 +8,8 @@ services:
       - PUID=1111
       - PGID=1112
     volumes:
-      - /home/mamu/netboot/dhcpconfig:/config
-    network_mode: "host"  # ホストネットワークモードを使用
+      - /path/to/your/netboot/dhcpconfig:/config
+    network_mode: "host"
     restart: unless-stopped
 
   netbootxyz:
@@ -20,8 +20,8 @@ services:
       - NGINX_PORT=80
       - WEB_APP_PORT=3000
     volumes:
-      - /home/mamu/netboot/config:/config
-      - /home/mamu/netboot/assets:/assets
+      - /path/to/your/netboot/config:/config
+      - /path/to/your/netboot/assets:/assets
     networks:
       - my_custom_network
     ports:
