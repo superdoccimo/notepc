@@ -200,12 +200,12 @@ b. **NAT configuration (using iptables)**
 ### Supplementary Information and Reference Links
 
 - **Supplementary Pages:**
-  - [Link 1](https://aaa.xyz) - Contains supplementary explanations and detailed information.
-  - [Link 2](https://bbb.xyz) - Includes additional documentation related to this project.
+  - [Link 1](https://betelgeuse.work/archives/7481) - Contains supplementary explanations and detailed information.
+  - [Link 2](https://betelgeuse.work/archives/7832) - Includes additional documentation related to this project.
 
 - **Reference Videos:**
-  - [Video 1](http://youtube1.com) - A video guide on setting up and using the project.
-  - [Video 2](http://youtube2.com) - A tutorial video explaining the PXE boot procedure.
+  - [Video 1](https://youtu.be/lpLYnw0Sj34) - A video guide on setting up and using the project.
+  - [Video 2](https://youtu.be/qw6fyu_2TTk) - A tutorial video explaining the PXE boot procedure.
 
 ### Network Diagram
 
