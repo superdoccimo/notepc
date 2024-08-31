@@ -22,21 +22,21 @@ This project provides Docker Compose files and setup instructions to configure a
 
    ```yaml
    network:
-       version: 2
-       ethernets:
-           enp1s0:
-               addresses:
-                   - 10.0.0.1/24
-               nameservers:
-                   addresses:
-                       - 8.8.8.8
-                       - 8.8.4.4
-       wifis:
-           wlp2s0:
-               access-points:
-                   TP-Link_6BEB:
-                       password: '123456789'
-               dhcp4: true
+    version: 2
+    ethernets:
+        enp1s0:
+            addresses:
+                - 10.0.0.1/24
+            nameservers:
+                addresses:
+                    - 8.8.8.8
+                    - 8.8.4.4
+    wifis:
+        wlp2s0:
+            access-points:
+                "TP-Link_6BEB":
+                    password: "123456789"
+            dhcp4: true
    ```
 4. **Example configuration for a client PC:**
    -This section shows an example configuration for a client PC using the server PC as a gateway. This section includes how to configure the static IP address version, the DHCP version, and the Windows client.
@@ -45,27 +45,28 @@ This project provides Docker Compose files and setup instructions to configure a
 - Use the following Netplan configuration to set up a static IP address on an Ubuntu client PC
 
    ```yaml
-   network: 2
-       version: 2
-       ethernets:: enp1s0: enp1s0: enp1s0
-           enp1s0: addresses: 2
-                  addresses: 10.0.0.100/24
-                   - 10.0.0.100/24
-               gateway4: 10.0.0.1
-               nameservers: 8.8.8.8.8
-                   - 8.8.8.8
-                   - 8.8.4.4
+   network:
+  version: 2
+  ethernets:
+    enp1s0:
+      addresses:
+        - 10.0.0.100/24
+      gateway4: 10.0.0.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
     ```
 
 **DHCP version (Ubuntu):**
 - This is an example of a Netplan configuration where the client PC automatically obtains an IP address from the server PC using DHCP.
 
   ```yaml
-  network: 2
-    version: 2
-    ethernets:: enp1s0: enp1s0: enp1s0
-        enp1s0: true
-            dhcp4: true
+  network:
+  version: 2
+  ethernets:
+    enp1s0:
+      dhcp4: true
   ```
 
 **Check Windows client PC network settings:**
