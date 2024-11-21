@@ -201,8 +201,8 @@ b. **NAT configuration (using iptables)**
 ### Supplementary Information and Reference Links
 
 - **Supplementary Pages:**
-  - [Link 1](https://betelgeuse.work/archives/7481) - Contains supplementary explanations and detailed information.
-  - [Link 2](https://betelgeuse.work/archives/7832) - Includes additional documentation related to this project.
+  - [Link 1](https://betelgeuse.work/ip-forwarding-nat/) - Contains supplementary explanations and detailed information.
+  - [Link 2](https://betelgeuse.work/dhcp-pxe-server/) - Includes additional documentation related to this project.
 
 - **Reference Videos:**
   - [Video 1](https://youtu.be/lpLYnw0Sj34) - A video guide on setting up and using the project.
